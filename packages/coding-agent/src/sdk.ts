@@ -2596,6 +2596,7 @@ async function createAgentSessionScoped(options: CreateAgentSessionOptions): Pro
 			localProtocolOptions,
 			() => (hasSession ? session.getAsyncJobSnapshot() : null),
 			() => (hasSession ? session.getPlanModeState() : undefined),
+			() => (hasSession ? session.getGoalModeState() : undefined),
 		);
 
 		credentialDisabledTarget = extensionRunner;
